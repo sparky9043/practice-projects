@@ -8,14 +8,21 @@ body {
   text-align: center;
 }
 
+.container h1 {
+  margin: 0.2em;
+  font-size: 40px;
+}
+
 .container .time {
   font-size: 40px;
   display: flex;
   flex-direction: column;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
 }
 
 .buttons button {
   margin: 0.2em;
   padding: 0.5em;
-  font-size: 25px;
+  font-size: 20px;
 }
