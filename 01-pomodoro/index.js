@@ -22,10 +22,7 @@ startBtn.addEventListener("click", () => {
         timeDisplay.textContent = `${minute.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")}`;
       } else {
         alert("Time's Up!");
-        clearInterval(interval);
-        time = 1500;
-        timeDisplay.textContent = `25:00`;
-        isRunning = false;
+        resetTimer();
       }
     }, 1000);
     isRunning = true;
@@ -38,8 +35,13 @@ stopBtn.addEventListener("click", () => {
 } );
 
 resetBtn.addEventListener("click", () => {
+  resetTimer();
+} );
+
+// reset timer function
+let resetTimer = () => {
   clearInterval(interval);
   time = 1500;
   timeDisplay.textContent = `25:00`;
   isRunning = false;
-} );
+}
