@@ -39,7 +39,7 @@ resetBtn.addEventListener("click", () => {
 } );
 
 // reset timer function
-let resetTimer = () => {
+const resetTimer = () => {
   clearInterval(interval);
   time = 1500;
   timeDisplay.textContent = `25:00`;
