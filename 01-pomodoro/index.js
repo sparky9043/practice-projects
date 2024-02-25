@@ -6,7 +6,7 @@ const resetBtn = document.querySelector("#reset-btn");
 
 // 25 min in seconds is 25*60 = 1500;
 let interval;
-let time = 10;
+let time = 1500;
 
 // Track if the timer is already running
 let isRunning = false;
@@ -38,6 +38,7 @@ stopBtn.addEventListener("click", () => {
 } );
 
 resetBtn.addEventListener("click", () => {
+  clearInterval(interval);
   time = 1500;
   timeDisplay.textContent = `25:00`;
   isRunning = false;
