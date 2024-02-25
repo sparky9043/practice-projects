@@ -6,7 +6,7 @@ const resetBtn = document.querySelector("#reset-btn");
 
 // 25 min in seconds is 25*60 = 1500;
 let interval;
-let time = 1500;
+let time = 1445;
 
 // Button Event Listener
 startBtn.addEventListener("click", () => {
@@ -14,7 +14,7 @@ startBtn.addEventListener("click", () => {
     time--;
     let minute = Math.floor( time / 60 );
     let second = time % 60;
-    timeDisplay.textContent = `${minute}:${second}`;
+    timeDisplay.textContent = `${minute.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")}`;
   }, 1000)
 } );
 
@@ -23,5 +23,6 @@ stopBtn.addEventListener("click", () => {
 } );
 
 resetBtn.addEventListener("click", () => {
-  console.log("reset");
+  time = 1500;
+  timeDisplay.textContent = `25:00`;
 } );
