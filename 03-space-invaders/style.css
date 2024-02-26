@@ -9,3 +9,8 @@
   height: 300px;
   border: solid 1px black;
 }
+
+.grid div {
+  width: 20px;
+  height: 20px;
+}
