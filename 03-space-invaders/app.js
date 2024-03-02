@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid');
 const resultDisplay = document.querySelector('.results');
 const width = 15;
+const aliensRemoved = [];
+let currentShooterIndex = 202;
 
 for (let i = 0; i < width * width; i++) {
   const square = document.createElement('div');
@@ -19,8 +21,13 @@ const alienInvaders = [
 
 function draw() {
   for (let i = 0; i < alienInvaders.length; i++) {
-    squares[alienInvaders[i]].classList.add('invader');
+    if (!aliensRemoved.includes(i)) {
+      squares[alienInvaders[i]].classList.add('invader');
+    }
+      
   }
 }
 
 draw();
+
+squares[currentShooterIndex].classList.add('shooter');
