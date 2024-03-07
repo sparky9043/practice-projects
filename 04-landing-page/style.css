@@ -22,16 +22,29 @@ a {
   display: flex;
   background-color: rgb(14, 14, 89);
   padding: 24px;
-  color: white;
+  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.nav a {
+  color: rgb(214, 198, 49);
+  text-shadow: 2px 2px 0 rgb(83, 82, 82);
+}
+
+.nav a:hover {
+  color: rgb(172, 159, 41);
+  text-shadow: 2px 2px 0 rgb(83, 82, 82);
 }
 
 .logo {
   font-size: 36px;
   font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
-  color:rgb(215, 204, 80);
+  color:rgb(214, 198, 49);
+  text-shadow: 4px 4px 0 rgb(83, 82, 82);
 }
 
-.links {
+.nav .links {
   display: flex;
+  gap: 24px;
 }
