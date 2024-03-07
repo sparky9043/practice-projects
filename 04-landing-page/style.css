@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +22,16 @@ a {
   text-decoration: none;
   color: white;
 }
+/* FONT SELECTORS */
+.player {
+  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+}
 
 /* NAV BAR STYLES */
 .nav {
   display: flex;
   background-color: rgb(14, 14, 89);
   padding: 24px;
-  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
   justify-content: space-between;
   align-items: baseline;
 }
@@ -44,7 +48,6 @@ a {
 
 .logo {
   font-size: 36px;
-  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
   color:rgb(214, 198, 49);
   text-shadow: 4px 4px 0 rgb(83, 82, 82);
 }
@@ -55,12 +58,23 @@ a {
 }
 
 /* CONTENT STYLES */
-.container {
+.intro {
   flex: 1;
   display: flex;
-  border: solid red;
   justify-content: center;
   align-items: center;
+}
+
+.welcome {
+  font-size: 24px;
+}
+
+.header p {
+  font-size: 20px;
+}
+
+.content {
+  display: flex;
 }
 
 /* FOOTER STYLES */
@@ -78,6 +92,19 @@ a {
 .media {
   display: flex;
   gap: 12px;
+}
+
+/* CARDS STYLES */
+.items {
+  display: flex;
+  gap: 12px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  min-height: 240px;
+  object-fit: cover;
 }
 
 /* SOCIAL MEDIA LOGOS */
