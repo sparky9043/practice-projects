@@ -42,7 +42,7 @@ a {
 }
 
 .nav a:hover {
-  color: rgb(172, 159, 41);
+  filter: brightness(0.5);
   text-shadow: 2px 2px 0 rgb(83, 82, 82);
 }
 
