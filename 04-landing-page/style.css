@@ -6,7 +6,7 @@
 
 body {
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 li {
@@ -15,4 +15,23 @@ li {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  background-color: rgb(14, 14, 89);
+  padding: 24px;
+  color: white;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 36px;
+  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+  color:rgb(215, 204, 80);
+}
+
+.links {
+  display: flex;
 }
