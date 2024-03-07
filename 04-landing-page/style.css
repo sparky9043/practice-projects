@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: rgb(56, 56, 128);
 }
 
 li {
@@ -22,6 +23,7 @@ a {
   text-decoration: none;
   color: white;
 }
+
 /* FONT SELECTORS */
 .player {
   font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
@@ -42,13 +44,12 @@ a {
 }
 
 .nav a:hover {
-  filter: brightness(0.5);
   text-shadow: 2px 2px 0 rgb(83, 82, 82);
 }
 
 .logo {
   font-size: 36px;
-  color:rgb(214, 198, 49);
+  color: rgb(214, 198, 49);
   text-shadow: 4px 4px 0 rgb(83, 82, 82);
 }
 
@@ -61,22 +62,34 @@ a {
 .intro {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .welcome {
-  font-size: 24px;
+  font-size: 36px;
+}
+
+.header {
+  max-width: 30vw;
+  color: rgb(218, 217, 217);
+  text-shadow: 0 0 2px black;
+}
+
+.header h1 {
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 1px black;
 }
 
 .header p {
-  font-size: 20px;
+  font-size: 24px;
+  text-shadow: 2px 2px 1px black;
 }
 
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: solid green;
 }
 
 /* CARDS STYLES */
@@ -86,13 +99,26 @@ a {
   align-items: center;
   gap: 24px;
   padding: 24px;
+  flex-wrap: wrap;
 }
 
 .card {
   max-width: 300px;
   min-height: 450px;
   border-radius: 10px;
-  box-shadow: 0 0 8px grey;
+  box-shadow: 2px 2px 4px black;
+  background-color: rgb(14, 14, 89);
+  color: rgb(218, 217, 217);
+}
+
+.card:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.card:active {
+  filter: brightness(0.6);
+  box-shadow: 0 0 4px black;
 }
 
 .card img {
@@ -100,7 +126,7 @@ a {
   max-width: 300px;
   min-height: 240px;
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 2px 2px black;
   object-fit: cover;
 }
 
@@ -115,6 +141,9 @@ a {
 
 .card p {
   padding: 16px;
+  font-size: 16px;
+  line-height: 1.3em;
+  text-shadow: 1px 1px 1px black;
 }
 
 /* FOOTER STYLES */
@@ -125,7 +154,7 @@ a {
   align-items: center;
   padding: 24px;
   background-color: rgb(14, 14, 89);
-  color: white;
+  color: rgba(255, 255, 255, 0.778);
   gap: 12px;
 }
 
@@ -146,7 +175,7 @@ a {
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-facebook {
