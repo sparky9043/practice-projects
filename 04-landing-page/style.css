@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: rgb(56, 56, 128);
+  color: white;
 }
 
 li {
@@ -156,6 +157,7 @@ a {
   background-color: rgb(14, 14, 89);
   color: rgba(255, 255, 255, 0.778);
   gap: 12px;
+  margin-top: auto;
 }
 
 .media {
@@ -194,3 +196,25 @@ a {
 }
 
 /* ABOUT PAGE STYLES */
+.intro-about {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  gap: 48px;
+  margin: auto 0;
+}
+
+.content-about {
+  max-width: 300px;
+}
+
+.content-about p {
+  font-size: 1.1em;
+}
+
+.intro-about img {
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  border-radius: 5px;
+}
