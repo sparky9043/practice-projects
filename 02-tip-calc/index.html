@@ -31,7 +31,7 @@
     submit.addEventListener("click", (event) => {
       const afterTax = bill.value * ( 1 + (tax.value / 100));
       const finalAmount = afterTax * ( 1 + (tip.value / 100)); 
-      display.textContent = finalAmount;
+      display.textContent = finalAmount.toFixed(2);
     })
   </script>
 </body>
