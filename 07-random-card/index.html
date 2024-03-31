@@ -12,6 +12,19 @@
     p {
       font-size: 1.5em;
     }
+
+    .container {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+    }
+
   </style>
 </head>
 <body>
@@ -20,8 +33,29 @@
   <div class="container"></div>
   <script>
     const container = document.querySelector('.container');
+
+    function mixCards() {
+      for (let i = 0; i < 4; i++) {
+        const card = document.createElement('div');
+        card.setAttribute('class', 'card');
+        card.addEventListener('click', function() {
+          if (this.id === 'win') {
+            alert('You Win!');
+          } else {
+            alert('You Lose!');
+          }
+        });
+        container.appendChild(card);
+      }
+    }
+
+    mixCards();
+
+    const cards = Array.from(document.querySelectorAll('.container div'));
+    const random = Math.round(Math.random()*4);
+
+    cards[random].setAttribute('id','win');
     
-    console.log(container);
   </script>
 </body>
 </html>
