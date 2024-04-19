@@ -26,11 +26,9 @@ function displayResults(player, computer) {
 
   const finalResult = checkWinner(player, computer);
   resultDisplay.textContent = finalResult;
-
 }
 
 function checkWinner(player, computer) {
-  // console.log(`Player chose ${player}. Computer chose ${computer}`);
   if (player === computer) {
     draw++;
     return `It's a draw!`;
