@@ -50,3 +50,7 @@ button#restart {
   font-size: 24px;
   border-radius: 6px;
 }
+
+input#size {
+  margin: 2em;
+}
