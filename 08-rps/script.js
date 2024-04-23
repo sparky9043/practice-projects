@@ -5,8 +5,7 @@ scroll.addEventListener('change', updateSize);
 scroll.addEventListener('mousemove', updateSize);
 
 function updateSize() {
-  const suffix = this.dataset.unit;
-  document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  document.documentElement.style.setProperty(`--${this.name}`, `${this.value}${this.dataset.unit}`);
 }
 
 
