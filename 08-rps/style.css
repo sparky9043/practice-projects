@@ -44,7 +44,7 @@ div.container button:active {
   filter: brightness(0.9);
 }
 
-button#clear {
+button#restart {
   margin: 24px;
   padding: 12px;
   font-size: 24px;
