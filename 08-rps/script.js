@@ -5,6 +5,8 @@ scroll.addEventListener('change', updateSize);
 scroll.addEventListener('mousemove', updateSize);
 
 function updateSize() {
+  const buttons = document.querySelectorAll('div.container button');
+  buttons.forEach(button => button.style.fontSize = `${this.value * 0.32}px`);
   document.documentElement.style.setProperty(`--${this.name}`, `${this.value}${this.dataset.unit}`);
 }
 
