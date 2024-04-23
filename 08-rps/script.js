@@ -35,17 +35,10 @@ function checkWinner(player, computer) {
 }
 
 function displayResult(obj) {
-  const resultContainer = document.querySelector('.result-container');
-  const playerResult = document.createElement('p');
-  const computerResult = document.createElement('p');
-  const tieResult = document.createElement('p');
-  
-  playerResult.textContent = `Player Score: ${obj.win}`;
-  computerResult.textContent = `Computer Score: ${obj.lose}`;
-  tieResult.textContent = `Ties: ${obj.tie}`;
-
-  resultContainer.textContent = '';
-  resultContainer.appendChild(playerResult);
-  resultContainer.appendChild(computerResult);
-  resultContainer.appendChild(tieResult);
+  const displays = document.querySelectorAll('.result-container span');
+  displays.forEach(display => {
+    if (display.id === 'player-display') display.textContent = obj.win;
+    else if (display.id === 'computer-display') display.textContent = obj.lose;
+    else display.textContent = obj.tie;
+  });
 }
