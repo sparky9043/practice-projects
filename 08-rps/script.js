@@ -43,4 +43,9 @@ function checkWinner(player, computer) {
     tallyObj.lose++;
   }
 
+  displayResult(player, computer, tallyObj);
+}
+
+function displayResult(player, computer, obj) {
+  console.log(player, computer, obj);
 }
