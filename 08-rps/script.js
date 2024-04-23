@@ -18,18 +18,6 @@ function startMatch(e) {
   checkWinner(playerChoice, computerChoice);
 }
 
-// function displayResults(player, computer) {
-//   const playerDisplay = document.querySelector('#player-display');
-//   const computerDisplay = document.querySelector('#computer-display');
-//   const resultDisplay = document.querySelector('#result-display');
-
-//   playerDisplay.textContent = `Player chose ${player}`;
-//   computerDisplay.textContent = `Computer chose ${computer}`;
-
-//   const finalResult = checkWinner(player, computer);
-//   resultDisplay.textContent = finalResult;
-// }
-
 function checkWinner(player, computer) {
   if (player === computer) {
     tallyObj.tie++;
