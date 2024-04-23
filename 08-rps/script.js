@@ -43,9 +43,21 @@ function checkWinner(player, computer) {
     tallyObj.lose++;
   }
 
-  displayResult(player, computer, tallyObj);
+  displayResult(tallyObj);
 }
 
-function displayResult(player, computer, obj) {
-  console.log(player, computer, obj);
+function displayResult(obj) {
+  const resultContainer = document.querySelector('.result-container');
+  const playerResult = document.createElement('p');
+  const computerResult = document.createElement('p');
+  const tieResult = document.createElement('p');
+  
+  playerResult.textContent = `Player Score: ${obj.win}`;
+  computerResult.textContent = `Computer Score: ${obj.lose}`;
+  tieResult.textContent = `Ties: ${obj.tie}`;
+
+  resultContainer.textContent = '';
+  resultContainer.appendChild(playerResult);
+  resultContainer.appendChild(computerResult);
+  resultContainer.appendChild(tieResult);
 }
