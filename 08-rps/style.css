@@ -43,3 +43,10 @@ div.container button:active {
   border-style: inset;
   filter: brightness(0.9);
 }
+
+button#clear {
+  margin: 24px;
+  padding: 12px;
+  font-size: 24px;
+  border-radius: 6px;
+}
