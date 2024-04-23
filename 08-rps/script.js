@@ -1,7 +1,9 @@
 const buttons = document.querySelectorAll('div.container button');
-let win = 0;
-let lose = 0;
-let draw = 0;
+const tallyObj = {
+  win: 0,
+  lose: 0,
+  tie: 0,
+}
 
 buttons.forEach((button) => {
   if (button.id) button.addEventListener('click', startMatch);
@@ -13,34 +15,32 @@ function startMatch(e) {
   const playerChoice = e.target.id;
   const computerChoice = rps[random];
   
-  displayResults(playerChoice, computerChoice);
+  checkWinner(playerChoice, computerChoice);
 }
 
-function displayResults(player, computer) {
-  const playerDisplay = document.querySelector('#player-display');
-  const computerDisplay = document.querySelector('#computer-display');
-  const resultDisplay = document.querySelector('#result-display');
+// function displayResults(player, computer) {
+//   const playerDisplay = document.querySelector('#player-display');
+//   const computerDisplay = document.querySelector('#computer-display');
+//   const resultDisplay = document.querySelector('#result-display');
 
-  playerDisplay.textContent = `Player chose ${player}`;
-  computerDisplay.textContent = `Computer chose ${computer}`;
+//   playerDisplay.textContent = `Player chose ${player}`;
+//   computerDisplay.textContent = `Computer chose ${computer}`;
 
-  const finalResult = checkWinner(player, computer);
-  resultDisplay.textContent = finalResult;
-}
+//   const finalResult = checkWinner(player, computer);
+//   resultDisplay.textContent = finalResult;
+// }
 
 function checkWinner(player, computer) {
   if (player === computer) {
-    draw++;
-    return `It's a draw!`;
+    tallyObj.tie++;
   } else if (
     (player === 'rock' && computer === 'scissors') ||
     (player === 'paper' && computer === 'rock') ||
     (player === 'scissors' && computer === 'paper')
   ) {
-    win++;
-    return `Player wins!`;
+    tallyObj.win++;
   } else {
-    lose++;
-    return `Computer wins!`;
+    tallyObj.lose++;
   }
+
 }
