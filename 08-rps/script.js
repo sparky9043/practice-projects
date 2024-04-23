@@ -1,4 +1,15 @@
 const buttons = document.querySelectorAll('div.container button');
+const scroll = document.querySelector('input#size');
+
+scroll.addEventListener('change', updateSize);
+scroll.addEventListener('mousemove', updateSize);
+
+function updateSize() {
+  const suffix = this.dataset.unit;
+  document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+}
+
+
 const tallyObj = {
   win: 0,
   lose: 0,
